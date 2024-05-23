@@ -1,0 +1,1 @@
+Esta carpeta contiene un conjunto ejercicios, prácticas y exámenes durante mi primer curso de programacion 1 en la Universidad Nebrija.

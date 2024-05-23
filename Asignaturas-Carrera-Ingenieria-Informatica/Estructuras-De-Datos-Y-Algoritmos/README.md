@@ -1,0 +1,1 @@
+Esta carpeta contiene un conjunto ejercicios, prácticas y exámenes durante mi primer curso de estructura de datos y algoritmos en la Universidad Nebrija.
