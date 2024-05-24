@@ -1,4 +1,3 @@
-// Algoritmo iterativo
 #include <iostream>
 #include <vector>
 

@@ -22,7 +22,7 @@ int main()
     std::cout << f(a, b) << "\n";
   };
 
-  print(suma, 3, 4); // -> 7
+  print(suma, 3, 4);
   print(resta, 3, 4);
 
   std::cout << suma(1, 2);

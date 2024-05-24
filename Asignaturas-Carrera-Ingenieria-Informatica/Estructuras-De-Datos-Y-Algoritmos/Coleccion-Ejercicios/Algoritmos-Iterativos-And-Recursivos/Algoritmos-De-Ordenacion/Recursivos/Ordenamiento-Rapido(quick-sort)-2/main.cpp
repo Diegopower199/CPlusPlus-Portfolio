@@ -10,9 +10,8 @@ void print(vector<int>&elements){
     cout<<"\n";
 }
 
-// A fucntion to compute the partition
 int partition(vector<int> & elements, int left_index, int right_index){
-    auto pivot = elements[left_index]; // any element works
+    auto pivot = elements[left_index];
     int i = left_index;
     int j = right_index;
 

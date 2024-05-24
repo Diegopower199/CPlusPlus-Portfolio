@@ -38,8 +38,8 @@ int main()
         return lasuma;
     };
 
-    cout << "La suma de las medias es: " << suma(media, {{2, 4}, {1, 5}}) << endl; // Suma de cada vector (2+4)=6 y (1+5)=6; media de la primera suma es 3 y de la segunda es 3; suma de ambas es 3+3=6
-    cout << "La suma de los maximos es: " << suma(max, {{2, 4}, {1, 5}}) << endl;  // Suma del máximo de cada vector; entre 2 y 4 (Máx = 4), entre 1 y 5 (Máx = 5). Suma de los máximos es 9
+    cout << "La suma de las medias es: " << suma(media, {{2, 4}, {1, 5}}) << endl;
+    cout << "La suma de los maximos es: " << suma(max, {{2, 4}, {1, 5}}) << endl;
 
     function<float(vector<float> const &)> suma_ = [](vector<float> const &v)
     {
@@ -82,10 +82,10 @@ int main()
         return sqrt(suma);
     };
 
-    cout << "La suma de las medias es: " << op(suma_, media, {{1, 5}, {3, 7}}) << endl; // -> 8
-    cout << "El maximo de los maximos es: " << op(max, max, {{1, 5}, {3, 7}}) << endl;  // -> 7
-    cout << "El maximo de la suma es: " << op(max, suma_, {{1, 5}, {3, 7}}) << endl;    // -> 10
-    cout << "La media del modulo es: " << op(media, modulo, {{1, 5}, {3, 7}}) << endl;  // -> 6,3574
+    cout << "La suma de las medias es: " << op(suma_, media, {{1, 5}, {3, 7}}) << endl;
+    cout << "El maximo de los maximos es: " << op(max, max, {{1, 5}, {3, 7}}) << endl;
+    cout << "El maximo de la suma es: " << op(max, suma_, {{1, 5}, {3, 7}}) << endl;
+    cout << "La media del modulo es: " << op(media, modulo, {{1, 5}, {3, 7}}) << endl;
 
     return 0;
 }

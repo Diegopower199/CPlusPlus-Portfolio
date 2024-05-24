@@ -3,10 +3,10 @@
 
 #include <string>
 
-struct TipoDato {
+struct TipoDato
+{
     std::string name;
     std::string dni;
-
 };
 
-#endif // TIPODATO_H
+#endif

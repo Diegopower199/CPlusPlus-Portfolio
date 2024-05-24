@@ -61,7 +61,7 @@ int main()
     int shift = 1;
     std::cout << input << std::endl;
     std::cout << cipher_iterative(input, shift) << std::endl;
-    
+
     std::vector<float> values{2, 3, 5, 8};
     std::cout << accumulate(0, values) << std::endl;
 }

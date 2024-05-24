@@ -16,9 +16,9 @@ public:
     int size() const;
     bool empty() const;
 
-    TipoDato& front() const;
-    TipoDato& back() const;
-    void push(const TipoDato& dato);
+    TipoDato &front() const;
+    TipoDato &back() const;
+    void push(const TipoDato &dato);
     void pop();
 
 private:
@@ -26,4 +26,4 @@ private:
     shared_ptr<ElementoListaDoble> _back = nullptr;
 };
 
-#endif // COLA_H
+#endif

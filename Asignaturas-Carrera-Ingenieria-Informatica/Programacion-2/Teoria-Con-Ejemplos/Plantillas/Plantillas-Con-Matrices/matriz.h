@@ -68,5 +68,4 @@ std::ostream &operator<<(std::ostream &os, Matriz<T> const &a)
     return os;
 }
 
-
 #endif

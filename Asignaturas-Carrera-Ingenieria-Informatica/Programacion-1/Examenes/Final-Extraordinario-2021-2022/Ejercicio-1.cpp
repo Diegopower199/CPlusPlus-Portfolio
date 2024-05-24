@@ -73,9 +73,6 @@ double medianaDatos(std::vector<std::vector<int>> datos)
     }
   }
 
-  // Si el tamaño es par hace falta hacer lo siguiente n/2 y (n/2)+1 y todo esto entre 2
-  // Si el tamaño es impa hace falta hacer los siguiente (n + 1 / 2)
-
   if (medianaOrdenada.size() % 2 == 0)
   {
     resultadoMediana = (medianaOrdenada.at((medianaOrdenada.size() / 2) - 1) + medianaOrdenada.at(((medianaOrdenada.size() / 2) + 1) - 1));

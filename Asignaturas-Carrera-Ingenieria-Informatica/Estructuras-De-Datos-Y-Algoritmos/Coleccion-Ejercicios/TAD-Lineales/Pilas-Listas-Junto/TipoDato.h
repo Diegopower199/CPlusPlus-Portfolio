@@ -5,8 +5,9 @@
 
 using namespace std;
 
-struct TipoDato{
+struct TipoDato
+{
     string name;
 };
 
-#endif // TIPODATO_H
+#endif

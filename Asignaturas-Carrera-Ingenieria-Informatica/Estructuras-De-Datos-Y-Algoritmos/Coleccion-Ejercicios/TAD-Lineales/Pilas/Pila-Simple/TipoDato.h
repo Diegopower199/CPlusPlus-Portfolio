@@ -3,11 +3,9 @@
 
 #include <string>
 
-
-struct TipoDato{
-    //std::string name;
-    //std::string dni;
+struct TipoDato
+{
     int numeros;
 };
 
-#endif // TIPODATO_H
+#endif

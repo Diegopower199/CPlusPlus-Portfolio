@@ -20,9 +20,3 @@ int main()
         std::cout << word << "? " << is_palindrome(word) << std::endl;
     }
 }
-
-/*
-ana --> true
-soy yo --> false
-isaac no ronca asi --> true
-*/

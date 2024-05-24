@@ -340,7 +340,7 @@ void sort_by_distance(std::vector<Point> &values, float origin_x, float origin_y
         for (int k = 0; k < values.size() - 1; k++)
         {
             if (_greater_than(values[k], values[k + 1], origin_x, origin_y))
-            { // compare adyacent values
+            {
                 std::swap(values[k], values[k + 1]);
             }
         }

@@ -28,7 +28,7 @@ int main()
 
     if (!palabra.empty())
     {
-        palabras.push_back(palabra); // Guardar la última palabra
+        palabras.push_back(palabra);
         contadorPalabras++;
     }
 
@@ -53,7 +53,7 @@ int main()
 
     if (!oracion.empty())
     {
-        oraciones.push_back(oracion); // Guardar la última oración si no termina en punto o coma
+        oraciones.push_back(oracion);
         contadorOraciones++;
     }
 

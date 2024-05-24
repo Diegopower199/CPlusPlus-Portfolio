@@ -2,36 +2,46 @@
 
 Pila::Pila() : _front{nullptr} {}
 
-int Pila::size() const {
+int Pila::size() const
+{
     shared_ptr<ElementoListaSimple> iterator = _front;
     int idx = 0;
-    while(iterator != nullptr){
+    while (iterator != nullptr)
+    {
         iterator = iterator->next;
         idx++;
     }
     return idx;
 }
 
-bool Pila::empty(shared_ptr<ElementoListaSimple> lista) const {
+bool Pila::empty(shared_ptr<ElementoListaSimple> lista) const
+{
     return (lista == nullptr);
 }
 
-void Pila::push(const TipoDato &dato) {
+void Pila::push(const TipoDato &dato)
+{
     auto elem = make_shared<ElementoListaSimple>(ElementoListaSimple{dato});
-    if(_front != nullptr){
+    if (_front != nullptr)
+    {
         elem->next = _front->next;
         _front = elem;
-    }else{
+    }
+    else
+    {
         _front = elem;
     }
 }
 
-void Pila::pop() {
-    if(_front != nullptr){
-        _front = _front -> next;
+void Pila::pop()
+{
+    if (_front != nullptr)
+    {
+        _front = _front->next;
     }
 }
 
-TipoDato &Pila::top() const {
-    return _front -> dato;
+TipoDato &Pila::top() const
+{
+    return _front->dato;
 }

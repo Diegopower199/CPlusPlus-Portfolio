@@ -18,9 +18,7 @@ class Vector3
 public:
     Vector3(T const &elem1, T const &elem2, T const &elem3);
 
-    // Hacer funciones getter y setter templatizadas
-
-    T getElem(int i) const;
+        T getElem(int i) const;
     void print(T const &a, MOD const &b);
 
     MOD modulo() const;
@@ -63,7 +61,6 @@ T Vector3<T, MOD>::getElem(int i) const
         return elem3;
     }
 
-    // Si pide cualquier otra cosa lanzas esta excepcion
     throw std::string{"Out of bounds"};
 }
 
@@ -74,7 +71,6 @@ void print(T const &a, Y const &b)
     std::cout << b << "\n";
 }
 
-// si quiero imprimir int la funcion general esa me sirve por eso no la particularizo
 int main()
 {
     Vector3<int, int> a{1, 2, 3};

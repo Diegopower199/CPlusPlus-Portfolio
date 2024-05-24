@@ -5,11 +5,10 @@ int accumulate(int sum, std::vector<int> values)
 {
     if (values.empty())
     {
-        return sum; // Caso base: si el vector está vacío, devolvemos la suma actual
+        return sum;
     }
     else
     {
-        // Sumamos el primer elemento del vector al total acumulado y llamamos a la función recursivamente con el resto del vector
         return accumulate(sum + values[0], std::vector<int>(values.begin() + 1, values.end()));
     }
 }

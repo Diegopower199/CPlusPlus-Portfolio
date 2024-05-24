@@ -2,5 +2,4 @@
 
 LinkedList::LinkedList()
 {
-
 }

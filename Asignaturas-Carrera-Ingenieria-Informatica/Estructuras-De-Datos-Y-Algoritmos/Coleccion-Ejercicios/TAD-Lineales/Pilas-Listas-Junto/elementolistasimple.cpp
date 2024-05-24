@@ -1,7 +1,5 @@
 #include "elementolistasimple.h"
 
-ElementoListaSimple::ElementoListaSimple(const TipoDato & dato) : dato{dato}
+ElementoListaSimple::ElementoListaSimple(const TipoDato &dato) : dato{dato}
 {
-
 }
-

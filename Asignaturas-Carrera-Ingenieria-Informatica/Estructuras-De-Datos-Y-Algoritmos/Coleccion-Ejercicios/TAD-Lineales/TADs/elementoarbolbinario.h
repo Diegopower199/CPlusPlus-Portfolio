@@ -6,15 +6,15 @@
 
 using namespace std;
 
-class ElementoArbolBinario {
+class ElementoArbolBinario
+{
 public:
-    // Members
     TipoDato dato;
     shared_ptr<ElementoArbolBinario> left = nullptr;
     shared_ptr<ElementoArbolBinario> right = nullptr;
+
 public:
-    // Constructor
-    ElementoArbolBinario(const TipoDato & dato_);
+    ElementoArbolBinario(const TipoDato &dato_);
 };
 
-#endif // ELEMENTOARBOLBINARIO_H
+#endif

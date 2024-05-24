@@ -7,14 +7,14 @@
 
 using namespace std;
 
-class ElementoArbol{
+class ElementoArbol
+{
 public:
-    // Members
     TipoDato dato;
     vector<shared_ptr<ElementoArbol>> children;
+
 public:
-    // Constructor
-    ElementoArbol(const TipoDato& dato_);
+    ElementoArbol(const TipoDato &dato_);
 };
 
-#endif // ELEMENTOARBOL_H
+#endif

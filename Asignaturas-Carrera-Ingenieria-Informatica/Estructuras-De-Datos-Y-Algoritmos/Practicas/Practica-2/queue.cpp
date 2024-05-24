@@ -3,7 +3,7 @@
 Queue::Queue() {}
 
 int Queue::size() const
-{ // Devuelve el tamaño
+{
     auto iterator = _front;
     int idx = 0;
     while (iterator != nullptr)
@@ -15,22 +15,22 @@ int Queue::size() const
 }
 
 bool Queue::empty() const
-{ // Comprueba si esta vacio
+{
     return this->size() == 0;
 }
 
 Persona &Queue::front() const
-{ // Devuelve el primer elemento
+{
     return _front->dato;
 }
 
 Persona &Queue::back() const
-{ // Devuelve el ultimo
+{
     return _back->dato;
 }
 
 void Queue::push(const Persona &dato)
-{ // Inserta un elemento y se añade al final
+{
     auto elem = std::make_shared<ElementListaDoble>(ElementListaDoble{dato});
     if (this->empty())
     {
@@ -44,7 +44,7 @@ void Queue::push(const Persona &dato)
 }
 
 void Queue::pop()
-{ // Quita el primer elemento de la cola
+{
     _front = _front->next;
     if (_front == nullptr)
     {
@@ -52,7 +52,6 @@ void Queue::pop()
     }
 }
 
-// Colar en orden a los friends justo detrás del elemento contact
 void Queue::sneak_in(const Persona &contact, Queue &friends)
 {
     auto iterator = _front;

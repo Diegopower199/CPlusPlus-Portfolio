@@ -1,7 +1,6 @@
 #ifndef ELEMENTOLISTASIMPLE_H
 #define ELEMENTOLISTASIMPLE_H
 
-
 #include <memory>
 #include "TipoDato.h"
 
@@ -14,8 +13,7 @@ public:
     shared_ptr<ElementoListaSimple> next = nullptr;
 
 public:
-    ElementoListaSimple(const TipoDato& dato);
-
+    ElementoListaSimple(const TipoDato &dato);
 };
 
-#endif // ELEMENTOLISTASIMPLE_H
+#endif

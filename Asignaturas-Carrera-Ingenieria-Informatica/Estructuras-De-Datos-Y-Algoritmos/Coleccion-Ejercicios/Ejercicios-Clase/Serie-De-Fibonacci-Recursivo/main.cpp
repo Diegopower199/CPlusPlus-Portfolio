@@ -4,15 +4,14 @@ int fibonacci(int index)
 {
     if (index == 0)
     {
-        return 0; // Primer término de la serie de Fibonacci
+        return 0;
     }
     else if (index == 1)
     {
-        return 1; // Segundo término de la serie de Fibonacci
+        return 1;
     }
     else
     {
-        // La serie de Fibonacci es la suma de los dos términos anteriores
         return fibonacci(index - 1) + fibonacci(index - 2);
     }
 }

@@ -98,5 +98,4 @@ int main()
   forEach(miVector, tripleValoresVector);
 
   forEach(entreDosVector, mostrar);
-
 }

@@ -43,9 +43,7 @@ int main()
                 std::string nombre;
                 std::cin >> nombre;
                 Person *p = find(listin, [&](Person *p) -> bool
-                                 {
-                                     return p->getNombre() == nombre;
-                                 });
+                                 { return p->getNombre() == nombre; });
                 if (p)
                     std::cout << *p << "------------\n";
             }
@@ -69,7 +67,6 @@ int main()
         std::cout << "ERROR: " << e << "\n";
     }
 
-    // clear memory
     for (auto p : listin)
     {
         delete p;

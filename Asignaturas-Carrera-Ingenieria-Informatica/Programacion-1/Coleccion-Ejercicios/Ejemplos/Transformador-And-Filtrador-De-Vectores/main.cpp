@@ -85,11 +85,11 @@ int main()
     forEach(mostrarPares, vec);
     forEach(mostrarTriple, vec);
 
-    vector<int> eldoble = transform(doble, vec); // Transform -> Duplica el vector inicial
+    vector<int> eldoble = transform(doble, vec);
 
     auto resultado = transform(restos, vec);
-    forEach(mostrar, resultado); // -> Muestra 1,0,1,0
+    forEach(mostrar, resultado);
 
     auto filtrados = filter(mayor3, resultado);
-    forEach(mostrar, filtrados); // No muestra nada, xq no hay ningún valor que sea mayor o igual que 3 en 1,0,1,0...
+    forEach(mostrar, filtrados);
 }

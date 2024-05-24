@@ -22,11 +22,11 @@ private:
     std::shared_ptr<ElementoArbolBinario> root = nullptr;
 
 public:
-    BinarySearchTree(); // Creates empty tree
+    BinarySearchTree();
 
-    void push(const Empleado &); // Inserts new employee
+    void push(const Empleado &);
 
-    int size() const;                                            // Number of nodes
-    void for_each(std::function<void(Empleado &)> action) const; // Visit all the nodes
-    const Empleado &find(int id) const;                          // Return the employee with the given id
+    int size() const;
+    void for_each(std::function<void(Empleado &)> action) const;
+    const Empleado &find(int id) const;
 };

@@ -60,7 +60,6 @@ int main()
 {
     std::vector<int> values{1, 3, 5, 8, 13};
 
-    // Usando la función boolean binary_search
     bool found = binary_search(values, 8);
     if (found)
     {
@@ -71,7 +70,6 @@ int main()
         std::cout << "Element not found using binary_search" << std::endl;
     }
 
-    // Usando la función de búsqueda binaria recursiva que devuelve índice
     int index = BusquedaBinariaRecursiva(values, 8, 0, values.size() - 1);
     if (index != -1)
     {

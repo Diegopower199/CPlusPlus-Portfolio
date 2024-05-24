@@ -4,10 +4,10 @@
 #include <string>
 using namespace std;
 
-struct TipoDato{
+struct TipoDato
+{
     string name;
     string dni;
-    //int numeros;
 };
 
-#endif // TIPODATO_H
+#endif

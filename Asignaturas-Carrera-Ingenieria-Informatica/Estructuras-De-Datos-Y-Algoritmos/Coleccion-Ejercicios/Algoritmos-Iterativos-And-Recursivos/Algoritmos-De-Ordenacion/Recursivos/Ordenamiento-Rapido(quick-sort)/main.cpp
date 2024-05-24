@@ -10,7 +10,6 @@ void print(const vector<int> & elements){
     cout<<"\n";
 }
 
-// A function to merge two ordered lists
 int partition(vector<int> & elements, int left_index, int right_index){
     auto pivot = elements[left_index];
     int i = left_index;
@@ -26,18 +25,14 @@ int partition(vector<int> & elements, int left_index, int right_index){
     return j;
 }
 
-// Quick-sort algorithmn
 void quick_sort(vector<int>&elements, int left_index, int right_index){
     cout<<"Quick sort: ";
     print(elements);
-    // Check for base/trivial case
     if(left_index >= right_index){
         return;
     }else{
-        // Compute the pivot
         int pivot_index = partition(elements, left_index, right_index);
 
-        // Aply quick-sort to both sides (pivot is alrady in place)
         quick_sort(elements, left_index, right_index-1);
         quick_sort(elements, pivot_index+1, right_index);
     }

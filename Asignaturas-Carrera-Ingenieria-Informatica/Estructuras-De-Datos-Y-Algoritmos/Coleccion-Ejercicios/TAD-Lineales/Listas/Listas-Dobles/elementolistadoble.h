@@ -1,12 +1,12 @@
 #ifndef ELEMENTOLISTADOBLE_H
 #define ELEMENTOLISTADOBLE_H
 
-
 #include <memory>
 #include "TipoDato.h"
 using namespace std;
 
-class ElementoListaDoble{
+class ElementoListaDoble
+{
 
 public:
     TipoDato dato;
@@ -14,7 +14,7 @@ public:
     shared_ptr<ElementoListaDoble> prev = nullptr;
 
 public:
-    ElementoListaDoble(const TipoDato& dato);
+    ElementoListaDoble(const TipoDato &dato);
 };
 
-#endif // ELEMENTOLISTADOBLE_H
+#endif

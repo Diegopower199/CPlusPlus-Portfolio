@@ -2,8 +2,6 @@
 #include "complejo.h"
 using namespace std;
 
-// En vez de decir el tipo de retorno decimos que devuelva T, es decir puede ser int, string, float
-
 template <typename T>
 T suma(T const &a, T const &b)
 {

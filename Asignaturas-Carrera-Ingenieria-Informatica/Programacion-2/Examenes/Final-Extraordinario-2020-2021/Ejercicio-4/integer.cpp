@@ -71,7 +71,7 @@ bool Integer::isPrime()
 }
 
 Integer operator*(Integer const &c1, Integer const &c2)
-{ // mínimo común múltiplo
+{
     int menor = c1.numeroPositivo;
     int mayor = c2.numeroPositivo;
 
@@ -96,8 +96,7 @@ Integer operator*(Integer const &c1, Integer const &c2)
 }
 
 Integer operator/(Integer const &c1, Integer const &c2)
-{ // máximo común divisor
-
+{
     int menor = c1.numeroPositivo;
     int mayor = c2.numeroPositivo;
     Integer result;

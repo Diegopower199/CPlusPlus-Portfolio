@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// Funcion que imprime el array de punteros
 void print(array<shared_ptr<int>, 10> arr1)
 {
     cout << "\nElementos del array: \n";
@@ -17,7 +16,6 @@ void print(array<shared_ptr<int>, 10> arr1)
     cout << "\n";
 }
 
-// Funcion filter. Filtra los numeros pares del array y los genera en un vector, vec
 vector<shared_ptr<int>> filter(array<shared_ptr<int>, 10> const &arr, function<bool(int)> f)
 {
     vector<shared_ptr<int>> result;

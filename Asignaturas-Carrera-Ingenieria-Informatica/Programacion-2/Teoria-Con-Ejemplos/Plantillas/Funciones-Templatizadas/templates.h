@@ -35,7 +35,6 @@ void print(T const &a, Y const &b)
   std::cout << b << "\n";
 }
 
-// forEach
 template <class T, class Y>
 void forEach(T const &v, function<void(Y)> const &op)
 {
@@ -45,7 +44,6 @@ void forEach(T const &v, function<void(Y)> const &op)
   }
 }
 
-// filter
 template <class T, class Y>
 T filter(T const &v, function<bool(Y)> const &f)
 {
@@ -59,7 +57,6 @@ T filter(T const &v, function<bool(Y)> const &f)
   return result;
 }
 
-// map
 template <class T, class Y>
 T map(T const &v, function<Y(Y)> const &f)
 {
@@ -72,7 +69,6 @@ T map(T const &v, function<Y(Y)> const &f)
   return result;
 }
 
-// find
 template <class T, class Y>
 Y find(T const &v, function<bool(Y)> const &f)
 {

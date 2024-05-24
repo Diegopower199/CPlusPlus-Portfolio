@@ -42,9 +42,7 @@ int main()
                 std::string nombre;
                 std::cin >> nombre;
                 Person *p = listin.find([&](Person *p) -> bool
-                                        {
-                                            return p->getNombre() == nombre;
-                                        });
+                                        { return p->getNombre() == nombre; });
                 if (p)
                     std::cout << *p << "------------\n";
             }

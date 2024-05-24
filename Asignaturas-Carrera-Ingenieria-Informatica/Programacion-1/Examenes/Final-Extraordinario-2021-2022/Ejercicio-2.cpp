@@ -16,7 +16,7 @@ string unionFuncion(string palabra1, string palabra2)
   {
 
     if (letrasAmbasPalabrasSinRepeticion.find(palabra2.at(pos), 0) == 18446744073709551615)
-    { // Si no la encuentra
+    {
       letrasAmbasPalabrasSinRepeticion.push_back(palabra2.at(pos));
     }
   }
@@ -32,10 +32,10 @@ string interseccionFuncion(string palabra1, string palabra2)
   {
 
     if (palabra1.find(palabra2.at(pos), 0) != 18446744073709551615)
-    { // Si la encuentra
+    {
 
       if (letrasCoincidentesSinRepeticion.find(palabra2.at(pos), 0) == 18446744073709551615)
-      { // Para evitar la repeticion de un mismo caracter
+      {
         letrasCoincidentesSinRepeticion.push_back(palabra2.at(pos));
       }
     }
@@ -52,9 +52,9 @@ string diferenciaFuncion(string palabra1, string palabra2)
   {
 
     if (letrasPalabra1DiferentesSinRepeticion.find(palabra2.at(pos), 0) != 18446744073709551615)
-    { // Si la encuentra
+    {
       if (letrasPalabra1DiferentesSinRepeticion.find(palabra2.at(pos), 0) == 18446744073709551615)
-      { // Para evitar la repeticion de un mismo caracter
+      {
         letrasPalabra1DiferentesSinRepeticion.erase(letrasPalabra1DiferentesSinRepeticion.find(palabra2.at(pos)), 1);
       }
     }

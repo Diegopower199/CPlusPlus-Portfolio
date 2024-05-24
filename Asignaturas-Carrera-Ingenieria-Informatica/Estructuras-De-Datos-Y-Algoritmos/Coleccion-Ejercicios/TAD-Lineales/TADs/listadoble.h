@@ -7,4 +7,4 @@ public:
     ListaDoble();
 };
 
-#endif // LISTADOBLE_H
+#endif

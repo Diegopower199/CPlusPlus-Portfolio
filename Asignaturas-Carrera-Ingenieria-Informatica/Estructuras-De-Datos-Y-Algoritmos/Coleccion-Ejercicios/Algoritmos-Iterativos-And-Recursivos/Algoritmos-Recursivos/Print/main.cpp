@@ -3,7 +3,6 @@
 using namespace std;
 
 void print(string word){
-    // 'hello' = 'h' + 'ello'
     if(word.size() == 0){
         cout<<word;
     }else{

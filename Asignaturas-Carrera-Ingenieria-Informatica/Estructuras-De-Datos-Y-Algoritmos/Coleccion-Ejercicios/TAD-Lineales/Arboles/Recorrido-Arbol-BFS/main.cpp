@@ -4,7 +4,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     BinaryTree tree{"root"};
 
     BinaryTree t11{"11"};
@@ -20,11 +21,9 @@ int main() {
     t12.add_right(t24);
 
     LinkedList lista;
-    tree.bfs([&lista](const TipoDato& dato){
-        lista.push_back(dato);
-    });
+    tree.bfs([&lista](const TipoDato &dato)
+             { lista.push_back(dato); });
 
-    lista.for_each([](const TipoDato& dato){
-            std::cout << dato << std::endl;
-        });
+    lista.for_each([](const TipoDato &dato)
+                   { std::cout << dato << std::endl; });
 }

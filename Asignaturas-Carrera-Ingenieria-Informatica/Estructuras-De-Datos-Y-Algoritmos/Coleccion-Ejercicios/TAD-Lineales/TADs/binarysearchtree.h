@@ -7,29 +7,26 @@
 
 using namespace std;
 
-class BinarySearchTree {
-    protected:
-        shared_ptr<ElementoArbolBinario> root = nullptr;
+class BinarySearchTree
+{
+protected:
+    shared_ptr<ElementoArbolBinario> root = nullptr;
 
-    public:
-        BinarySearchTree();  // Creates empty tree
-        BinarySearchTree(const TipoDato& dato);  // Creates tree with root node
+public:
+    BinarySearchTree();
+    BinarySearchTree(const TipoDato &dato);
 
-        // Same as BinaryTree
-        int height() const;
-        int size() const; // Number of nodes
+    int height() const;
+    int size() const;
 
-        // Get data
-        const TipoDato& min() const;
-        const TipoDato& max() const;
+    const TipoDato &min() const;
+    const TipoDato &max() const;
 
-        // Traverse the tree
-        void dfs_inorder(function<void (const TipoDato&)> action) const;
+    void dfs_inorder(function<void(const TipoDato &)> action) const;
 
-        // Operations
-        bool find(const TipoDato&) const;
-        void push(const TipoDato&);
-        void remove(const TipoDato&);
+    bool find(const TipoDato &) const;
+    void push(const TipoDato &);
+    void remove(const TipoDato &);
 };
 
-#endif // BINARYSEARCHTREE_H
+#endif

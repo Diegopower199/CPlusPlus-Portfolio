@@ -1,5 +1,6 @@
 #ifndef ELEMENTLISTASIMPLE_H
 #define ELEMENTLISTASIMPLE_H
+
 #include <memory>
 #include "queue.h"
 

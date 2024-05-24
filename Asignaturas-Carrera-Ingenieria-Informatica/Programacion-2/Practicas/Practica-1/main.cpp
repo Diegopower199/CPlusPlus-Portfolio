@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// Funcion find
 shared_ptr<Persona> find(vector<shared_ptr<Persona>> const &v, function<bool(shared_ptr<Persona>)> f)
 {
     for (auto p : v)
@@ -17,7 +16,6 @@ shared_ptr<Persona> find(vector<shared_ptr<Persona>> const &v, function<bool(sha
     return nullptr;
 }
 
-// Funcion some
 bool some(vector<shared_ptr<Persona>> const &v, function<bool(shared_ptr<Persona>)> f)
 {
     auto r = find(v, f);

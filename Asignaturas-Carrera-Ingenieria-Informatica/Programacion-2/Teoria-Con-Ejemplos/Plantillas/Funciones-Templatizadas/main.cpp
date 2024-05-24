@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-  // Las funciones tempoplatizadas se deben declarar y definir SIEMPRE en archivos .h
+  // Las funciones templatizadas se deben declarar y definir SIEMPRE en archivos .h
   print<int>(3); // 3
   print<string>("hola");
 

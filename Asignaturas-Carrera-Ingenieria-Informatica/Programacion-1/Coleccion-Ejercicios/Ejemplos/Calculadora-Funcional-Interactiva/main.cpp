@@ -21,7 +21,7 @@ int main()
     };
 
     cout << "Primer caso: " << suma(1, 2) << endl;
-    print(suma, 3, 4);  // -> 7
-    print(resta, 3, 4); // -> -1
+    print(suma, 3, 4);
+    print(resta, 3, 4);
     return 0;
 }

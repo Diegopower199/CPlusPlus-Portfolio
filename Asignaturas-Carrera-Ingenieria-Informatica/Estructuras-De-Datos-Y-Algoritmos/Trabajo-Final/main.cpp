@@ -11,11 +11,11 @@ using namespace std;
 void bubble_sort(std::vector<int> &elements)
 {
     for (int i = 0; i < elements.size() - 1; i++)
-    { // 'n-1' iterations
+    {
         for (int k = 0; k < elements.size() - 1; k++)
-        { // 'n-1' iterations
+        {
             if (elements[k] > elements[k + 1])
-            { // compare adyacent values
+            {
                 std::swap(elements[k], elements[k + 1]);
             }
         }
@@ -25,17 +25,16 @@ void bubble_sort(std::vector<int> &elements)
 void selection_sort(std::vector<int> &elements)
 {
     for (int i = 0; i < elements.size(); i++)
-    { // 'n' iterations
-        // Search for the minimum element in the right (unordered) section
+    {
         int indexMin = i;
         for (int k = i + 1; k < elements.size(); k++)
-        { // 'n-i' iterations
+        {
             if (elements[k] < elements[indexMin])
-            { // keep index of min element
+            {
                 indexMin = k;
             }
         }
-        // Swap current element with the min
+
         std::swap(elements[i], elements[indexMin]);
     }
 }
@@ -47,7 +46,6 @@ std::vector<int> merge(const std::vector<int> &lhs,
     auto left_iterator = 0;
     auto right_iterator = 0;
 
-    // Iterate the two vectors at the same time, adding the lowest element
     while (left_iterator != lhs.size() && right_iterator != rhs.size())
     {
         if (lhs[left_iterator] < rhs[right_iterator])
@@ -62,7 +60,6 @@ std::vector<int> merge(const std::vector<int> &lhs,
         }
     }
 
-    // Add remaining elements
     for (int i = left_iterator; i < lhs.size(); i++)
     {
         ret.push_back(lhs[i]);
@@ -76,28 +73,23 @@ std::vector<int> merge(const std::vector<int> &lhs,
 
 std::vector<int> merge_sort(const std::vector<int> &elements)
 {
-    // Check for base/trivial case
     if (elements.size() <= 1)
     {
         return elements;
     }
     else
     {
-        // Split the vector in two
         auto middle = elements.size() / 2;
         std::vector<int> left{elements.begin(), elements.begin() + middle};
         std::vector<int> right{elements.begin() + middle, elements.end()};
 
-        // Apply merge_sort to each of them
         left = merge_sort(left);
         right = merge_sort(right);
 
-        // Merge those two (already) ordered vectors
         return merge(left, right);
     }
 }
 
-// A function to compute the partition
 int partition(std::vector<int> &elements, int left_index, int right_index)
 {
     auto pivot = elements.at(left_index);
@@ -117,20 +109,17 @@ int partition(std::vector<int> &elements, int left_index, int right_index)
     return j;
 }
 
-// Quick-sort algorithm
 void quick_sort(std::vector<int> &elements, int left_index, int right_index)
 {
-    // Check for base/trivial case
+
     if (left_index >= right_index)
     {
-        // return;
+        return;
     }
     else
     {
-        // Compute the pivot
         int pivot_index = partition(elements, left_index, right_index);
 
-        // Apply quick-sort to both sides (pivot is already in place)
         quick_sort(elements, left_index, pivot_index - 1);
         quick_sort(elements, pivot_index + 1, right_index);
     }
@@ -139,10 +128,10 @@ void quick_sort(std::vector<int> &elements, int left_index, int right_index)
 std::vector<int> insertion_Sort(std::vector<int> &elements)
 {
     int pos;
-    int change; // Cambio de los numeros
+    int change;
 
     for (int i = 0; i <= elements.size() - 1; i++)
-    { // 'n-1' iterations
+    {
         pos = i;
         change = elements.at(i);
 
@@ -156,7 +145,6 @@ std::vector<int> insertion_Sort(std::vector<int> &elements)
     return elements;
 }
 
-// shellsort implementation
 void shellsort(std::vector<float> elements, float num)
 {
     for (int gap = num / 2; gap > 0; gap /= 2)
@@ -410,8 +398,6 @@ int main()
 
     std::cout << "-----------------------------------------------------------------------------------------\n\n\n";
 
-    // METODO MERGE_SORT
-
     unsigned t16, t17;
     t16 = clock();
     std::cout << "VECTOR ORDENADO INVERSAMENTE\n\n";
@@ -642,8 +628,6 @@ int main()
 
     std::cout << "-----------------------------------------------------------------------------------------\n\n\n";
 
-    //  METODO DE INSERCION
-
     unsigned t32, t33;
     t32 = clock();
     std::cout << "VECTOR ORDENADO INVERSAMENTE\n\n";
@@ -763,7 +747,6 @@ int main()
     std::cout << "VECTOR ORDENADO INVERSAMENTE\n\n";
     std::vector<float> arrVectorOrdenadoInversamente = {100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
-    // Calculate size of array
     float N = sizeof(arrVectorOrdenadoInversamente) / sizeof(arrVectorOrdenadoInversamente[0]);
     std::cout << "Array to be sorted: \n";
     for (auto elem : arrVectorOrdenadoInversamente)

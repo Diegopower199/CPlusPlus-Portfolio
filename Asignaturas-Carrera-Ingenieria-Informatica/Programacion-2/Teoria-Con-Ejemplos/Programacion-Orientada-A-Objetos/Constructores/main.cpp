@@ -28,9 +28,10 @@ Foo::Foo(int a, int b, int c) : a{a}, b{b}, c{c}
 }
 
 Foo::Foo(int _a, int _b)
-{ // Sobrecarga
+{
     a = _a;
     b = _b;
+    cout << "sobrecarga";
 }
 
 int main()

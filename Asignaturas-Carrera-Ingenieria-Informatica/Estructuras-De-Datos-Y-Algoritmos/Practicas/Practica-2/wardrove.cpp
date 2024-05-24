@@ -10,7 +10,7 @@ WardrobeElement::WardrobeElement(const std::string &owner) : owner{owner}
 Wardrobe::Wardrobe() {}
 
 int Wardrobe::size() const
-{ // Devuelve el tamaño de la pila
+{
     auto iterator = front;
     int idx = 0;
     while (iterator != nullptr)
@@ -22,12 +22,12 @@ int Wardrobe::size() const
 }
 
 bool Wardrobe::empty() const
-{ // Compruba si esta vacia
+{
     return this->size() == 0;
 }
 
 void Wardrobe::push(const std::string &dato)
-{ // Inserte un elemento a la pila
+{
     auto elem = std::make_shared<WardrobeElement>(WardrobeElement{dato});
     if (this->empty())
     {
@@ -40,18 +40,17 @@ void Wardrobe::push(const std::string &dato)
     }
 }
 
-void Wardrobe::pop() // Quita un elemento
+void Wardrobe::pop()
 {
 
     front = front->next;
 }
 
 std::string &Wardrobe::top() const
-{ // Devuelve el primer elemento de la pila
+{
     return front->owner;
 }
 
-// Crea dos pilas donde almacena hombre y mujeres
 void wardrobe(Queue &joy_slava, Wardrobe &men, Wardrobe &women)
 {
     while (!joy_slava.empty())

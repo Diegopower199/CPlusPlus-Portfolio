@@ -20,7 +20,6 @@ int main()
     tree.for_each([](const Empleado &employee)
                   { std::cout << employee << std::endl; });
 
-    // Get employees and managers
     BinarySearchTree employees, managers;
     filter_database(tree, employees, managers);
 

@@ -5,32 +5,29 @@
 #include "elementoarbolbinario.h"
 #include <functional>
 
-class AVLTree {
-    protected:
-        shared_ptr<ElementoArbolBinario> root = nullptr;
+class AVLTree
+{
+protected:
+    shared_ptr<ElementoArbolBinario> root = nullptr;
 
-    public:
-        AVLTree();
-        AVLTree(const TipoDato& dato);
+public:
+    AVLTree();
+    AVLTree(const TipoDato &dato);
 
-        // Same as BinaryTree
-        int height() const;
-        int size() const; // Number of nodes
+    int height() const;
+    int size() const;
 
-        // Get data
-        const TipoDato& min() const;
-        const TipoDato& max() const;
+    const TipoDato &min() const;
+    const TipoDato &max() const;
 
-        // Traverse the tree
-        void dfs_inorder(function<void (const TipoDato&)> action) const;
+    void dfs_inorder(function<void(const TipoDato &)> action) const;
 
-        // Operations
-        bool find(const TipoDato&) const;
-        void push(const TipoDato&);
-        void remove(const TipoDato&);
+    bool find(const TipoDato &) const;
+    void push(const TipoDato &);
+    void remove(const TipoDato &);
 
-    private:
-        void rebalance(); // Function to call after every insertion/removal
+private:
+    void rebalance();
 };
 
-#endif // AVLTREE_H
+#endif

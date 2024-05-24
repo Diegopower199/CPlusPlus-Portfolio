@@ -25,8 +25,7 @@ public:
     void setMatrix(const T &value);
 
 private:
-    // T array;
-    array<array<float, 3>, 3> arrayMatriz;
+        array<array<float, 3>, 3> arrayMatriz;
 };
 
 template <typename T>

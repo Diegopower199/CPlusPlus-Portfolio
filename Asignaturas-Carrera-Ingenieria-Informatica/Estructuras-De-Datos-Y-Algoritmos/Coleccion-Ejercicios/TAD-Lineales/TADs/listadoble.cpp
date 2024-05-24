@@ -2,5 +2,4 @@
 
 ListaDoble::ListaDoble()
 {
-
 }

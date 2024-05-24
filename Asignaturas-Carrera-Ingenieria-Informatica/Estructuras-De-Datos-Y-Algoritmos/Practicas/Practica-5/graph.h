@@ -49,13 +49,12 @@ protected:
 template <int N>
 Graph<N>::Graph()
 {
-    // Nodes
+
     for (int i = 0; i < N; i++)
     {
         nodes.at(i) = nullptr;
     }
 
-    // Edges
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < N; j++)
@@ -86,7 +85,6 @@ void Graph<N>::remove_node(int node)
 template <int N>
 bool Graph<N>::add_edge(int origin, int target, int dato_edge)
 {
-    // Check if nodes exists:
     if (!nodes.at(origin) || !nodes.at(target))
     {
         return false;
@@ -119,12 +117,12 @@ int Graph<N>::find_node(const std::string &dato_node) const
 template <int N>
 Graph<N> Graph<N>::mst_prim() const
 {
-    // Distance from the MST already computed to the node indicated by the index
+
     std::array<int, N> distances;
-    // Node inside the MST that is closer to node-at-index
+
     std::array<int, N> origins;
     std::array<bool, N> added;
-    // Initialize
+
     for (int i = 0; i < N; i++)
     {
         distances[i] = std::numeric_limits<int>::max();
